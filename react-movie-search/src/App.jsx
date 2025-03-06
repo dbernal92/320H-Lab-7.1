@@ -4,6 +4,16 @@ import "./App.css";
 import MovieDisplay from "./components/MovieDisplay";
 import Form from "./components/Form";
 
+// Array that random movie comes from when the user first opens the page
+const movieList = ["the mummy", "twilight", "star wars", "sweeney todd", "hercules"];
+
+const randomMovie = movieList[Math.floor(Math.random() * movieList.length)];
+
+// Test to understand how Math.floor() and Math.random() work to generate random movies
+console.log(Math.floor(Math.random()))
+
+console.log(randomMovie);
+
 export default function App() {
   // Constant with your API Key
   const apiKey = "c55ec6a2";

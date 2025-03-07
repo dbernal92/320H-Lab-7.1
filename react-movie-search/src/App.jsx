@@ -16,14 +16,14 @@ console.log(randomMovie);
 
 export default function App() {
   // Constant with your API Key
-  const apiKey = "c55ec6a2";
+  const apiKey = import.meta.env.VITE_API_KEY;
 
   // State to hold movie data
   const [movie, setMovie] = useState(null);
 
   const getMovie = async (searchTerm) => {
     const response = await fetch(
-      `http://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`
+      `https://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`
     );
     const data = await response.json();
     setMovie(data);
